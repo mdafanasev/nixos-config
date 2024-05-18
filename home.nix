@@ -19,6 +19,7 @@
   # environment.
   home.packages = with pkgs; [
     wl-clipboard
+    nerdfonts
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
@@ -80,6 +81,64 @@
       init.defaultBranch = "main";
       core.editor = "nvim";
       push.autoSetupRemote = true;
+    };
+  };
+
+  programs.alacritty = {
+    enable = true;
+    settings = {
+      window = {
+        padding.x = 2;
+	padding.y = 0;
+	dynamic_padding = true;
+	decorations = "none";
+      };
+      scrolling = {
+        history = 10000;
+	multiplier = 3;
+      };
+      font = {
+        normal = {
+	  family = "Iosevka Nerd Font Mono";
+	  style = "Regular";
+	};
+        bold = {
+	  family = "Iosevka Nerd Font Mono";
+	  style = "Regular";
+	};
+        italic = {
+	  family = "Iosevka Nerd Font Mono";
+	  style = "Regular";
+	};
+        bold_italic = {
+	  family = "Iosevka Nerd Font Mono";
+	  style = "Regular";
+	};
+	size = 12;
+      };
+      env.TERM = "xterm-256color";
+      colors = {
+        primary.background = "0x1a1b26";
+        primary.foreground = "0xa9b1d6";
+        normal.black = "0x32344a";
+        normal.red = "0xf7768e";
+        normal.green = "0x9ece6a";
+        normal.yellow = "0xe0af68";
+        normal.blue = "0x7aa2f7";
+        normal.magenta = "0xad8ee6";
+        normal.cyan = "0x449dab";
+        normal.white = "0x787c99";
+        bright.black = "0x444b6a";
+        bright.red = "0xff7a93";
+        bright.green = "0xb9f27c";
+        bright.yellow = "0xff9e64";
+        bright.blue = "0x7da6ff";
+        bright.magenta = "0xbb9af7";
+        bright.cyan = "0x0db9d7";
+        bright.white = "0xacb0d0";
+      };
+      selection.save_to_clipboard = true;
+      mouse.hide_when_typing = true;
     };
   };
 
