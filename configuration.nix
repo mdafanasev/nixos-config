@@ -97,6 +97,7 @@ in
     wofi
     alacritty
     firefox
+    chromium
     pulseaudio
     pavucontrol
     acpi

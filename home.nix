@@ -20,6 +20,7 @@
   home.packages = with pkgs; [
     wl-clipboard
     nerdfonts
+    telegram-desktop
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
