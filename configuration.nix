@@ -13,11 +13,7 @@ in
       ./hardware-configuration.nix
     ];
 
-  hardware.opengl = {
-    enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
-  };
+  hardware.graphics.enable = true;
 
   services.xserver.videoDrivers = ["nvidia"];
 
